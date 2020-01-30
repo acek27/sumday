@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAppTable extends Migration
+class CreateOpdTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreateAppTable extends Migration
      */
     public function up()
     {
-        Schema::create('app', function (Blueprint $table) {
+        Schema::create('opd', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+	    $table->string('nama_opd');
+	    $table->string('alamat');
+	    $table->string('akronim_opd',50);
+	    $table->string('email_opd');
+	    $table->string('telp_opd',13);
         });
     }
 
@@ -26,6 +30,6 @@ class CreateAppTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('app');
+        Schema::dropIfExists('opd');
     }
 }

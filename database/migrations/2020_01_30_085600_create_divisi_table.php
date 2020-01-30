@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateServerTable extends Migration
+class CreateDivisiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateServerTable extends Migration
      */
     public function up()
     {
-        Schema::create('server', function (Blueprint $table) {
+        Schema::create('divisi', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateServerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('server');
+        Schema::dropIfExists('divisi');
     }
 }

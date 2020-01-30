@@ -15,7 +15,7 @@ class CreateRamTable extends Migration
     {
         Schema::create('ram', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->tinyInteger('ukuran');
         });
     }
 

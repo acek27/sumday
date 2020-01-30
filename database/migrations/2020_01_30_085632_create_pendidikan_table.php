@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHddTable extends Migration
+class CreatePendidikanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateHddTable extends Migration
      */
     public function up()
     {
-        Schema::create('hdd', function (Blueprint $table) {
+        Schema::create('pendidikan', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->tinyInteger('ukuran_hdd');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +26,6 @@ class CreateHddTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hdd');
+        Schema::dropIfExists('pendidikan');
     }
 }
